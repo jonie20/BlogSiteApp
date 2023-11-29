@@ -17,7 +17,9 @@
                 <div class="card-body">
                     <h5 class="card-title">{{ post.title }}</h5>
                     <div class="card-text truncate-3">{{ post.blog_post|safe }} </div>
-                    <a href="{% url 'view-post' post.id %}" class="btn btn-primary">Read</a>
+                    <a href="{% url 'view-post' post.id %}" class="btn btn-primary">read more...</a> <hr>
+                    <span class="me-1"><img src="{{ user.profile.avatar.url }}" alt="User Avatar" id="user-avatar" class="rounded-circle"></span>
+                    <span class="me-5"><b>{{ post.author }}</b></span>
                 </div>
             </div>
         </div>

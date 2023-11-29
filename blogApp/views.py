@@ -265,7 +265,7 @@ def delete_post(request):
 def view_post(request,pk=None):
     context['page_title'] = ""
     if pk is None:
-        messages.error(request,"Unabale to view Post")
+        messages.error(request,"Unable to view Post")
         return redirect('home-page')
     else:
         post = Post.objects.filter(id = pk).first()
@@ -275,7 +275,7 @@ def view_post(request,pk=None):
 
 def post_by_category(request,pk=None):
     if pk is None:
-        messages.error(request,"Unabale to view Post")
+        messages.error(request,"Unable to view Post")
         return redirect('home-page')
     else:
         category = Category.objects.filter(id=pk).first()
