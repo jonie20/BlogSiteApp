@@ -16,10 +16,6 @@ class UserProfile(models.Model):
     avatar = models.ImageField(blank=True, null = True, upload_to= 'images/')
     user_type = models.IntegerField(default = 2)
 
-    def save(self, *args, **kwargs):
-        super().save(*args,**kwargs)
-        img = Image.open(self.avatar.path)
-
 
 
     def __str__(self):
